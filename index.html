@@ -1,0 +1,323 @@
+<!-- 
+  Hello 😊.
+
+  This template is designed and developed by Nisar Hassan Naqvi
+  for anyone to use for free or customize the way they like.
+
+  Github Repo: https://github.com/nisarhassan12/portfolio-template/
+  My Website: https://nisar.dev
+
+  For business & inquires, contact me => syednisarhassan12@gmail.com
+-->
+
+<!--
+  Follow the instructions written in comments to create your stunning portfolio
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+
+  <!-- Put your site title here -->
+  <title>
+    Carson Hansen | Full-Stack Developer &amp; CS Graduate Student
+  </title>
+
+  <meta name="description" content="Carson Hansen is a Computer Science M.Eng student at Oregon State University with full-stack development experience and 6+ years of cross-functional team leadership.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Carson Hansen, Software Engineer, Full-Stack Developer, Java, JavaScript, Python, C++, C#, Vue.js, REST API, MongoDB" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link">Skills</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <!-- Replace the following name with your name -->
+          <span>Carson Hansen</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p>Full-stack developer &amp; CS graduate student, currently pursuing an M.Eng in Computer Science.</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Work ***** -->
+
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <div class="work__boxes">
+
+          <!-- Each div with the work__box class is a project. -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Abilities at Work</h3>
+              <p>
+                Full-stack capstone web application matching adults with disabilities to jobs they qualify
+                for, built for a real nonprofit client. Built authentication and login flows for two user
+                types, designed the job-creation interface over REST endpoints backed by MongoDB, and
+                created reusable front-end components across the app.
+              </p>
+              <ul class="work__list">
+                <li>Vue.js</li>
+                <li>REST API</li>
+                <li>MongoDB</li>
+                <li>Docker</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/smithcol11/AbilitiesAtWork" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/abilities-at-work.svg" class="work__image" alt="Abilities at Work screenshot" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>ChocAn.NET</h3>
+              <p>
+                A .NET implementation of a terminal/database system for a fictional healthcare-services
+                company, built collaboratively as part of a software engineering course. Includes a
+                documented system architecture and a full unit test suite covering database read/write
+                operations.
+              </p>
+              <ul class="work__list">
+                <li>C#</li>
+                <li>.NET</li>
+                <li>Unit Testing</li>
+                <li>System Design</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/MattMoradi/ChocAn.NET" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/chocan-net.svg" class="work__image" alt="ChocAn.NET architecture diagram" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Spooky Man</h3>
+              <p>
+                A Slender-Man-inspired horror game built in Unity. Players explore a map collecting pages
+                while evading an AI-controlled pursuer, with a throwable-object mechanic to slow it down.
+                Built solo end-to-end: map design, pursuit AI, and win/lose conditions.
+              </p>
+              <ul class="work__list">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Shader Programming</li>
+                <li>Game AI</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://youtu.be/qTZw--nKSII" target="_blank" class="link__text">
+                  Watch Demo <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/Cesium1289/Spooky-Man-Game" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/spooky-man.svg" class="work__image" alt="Spooky Man Game map overview" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Lofi-Aleatory</h3>
+              <p>
+                A generative music program written in C++ that plays sequences of notes, largely selected
+                at random from a major scale, using the SFML library for audio and UI. A self-directed
+                project exploring algorithmic composition, complete with unit tests and documentation.
+              </p>
+              <ul class="work__list">
+                <li>C++</li>
+                <li>SFML</li>
+                <li>Audio Programming</li>
+                <li>Unit Testing</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/Cesium1289/Lofi-Aleatory" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/lofi-aleatory.svg" class="work__image" alt="Lofi-Aleatory interface" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Clients ***** -->
+
+    <section class="client" id="clients">
+      <div class="row">
+        <h2>Skills</h2>
+        <div class="skills__group">
+          <h4 class="skills__group-title">Languages</h4>
+          <ul class="skills__pills">
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>C</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h4 class="skills__group-title">Frameworks &amp; Libraries</h4>
+          <ul class="skills__pills">
+            <li>REST API Design</li>
+            <li>JSON</li>
+            <li>Vue.js</li>
+            <li>Tailwind CSS</li>
+            <li>Passport</li>
+            <li>OpenGL</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h4 class="skills__group-title">Databases</h4>
+          <ul class="skills__pills">
+            <li>MongoDB</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h4 class="skills__group-title">Tools &amp; Practices</h4>
+          <ul class="skills__pills">
+            <li>Git / GitHub</li>
+            <li>CI Pipelines</li>
+            <li>Unit Testing</li>
+            <li>Agile / Scrum</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <!-- Replace the below paragraph with info about yourself -->
+            <p>
+              I'm a Computer Science graduate student at Oregon State University, pursuing an M.Eng with
+              a minor in Artificial Intelligence. My capstone project at Portland State gave me hands-on,
+              full-stack experience building and testing an API-driven web application for a real nonprofit
+              client, and I've since kept building projects that stretch across the stack &mdash; from
+              backend systems and databases to game development.
+            </p>
+            <p>
+              Before and during school, I spent 6+ years leading cross-functional teams in fast-paced,
+              guest-facing environments as an event and banquet manager &mdash; work that sharpened my
+              communication, problem-solving under pressure, and ability to translate stakeholder
+              requirements into results on a deadline. I'm a fast learner who's comfortable owning a
+              problem end-to-end, whether that's a line of code or a 1,100-guest event.
+            </p>
+            <!-- Provide a link to your resume -->
+            <a href="./Carson_Hansen_Resume_2026.pdf" class="btn" target="_blank">My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+            <!-- TODO: Replace this placeholder with a real headshot, e.g. ./images/carson-hansen.jpg -->
+            <img class="about__photo" src="./images/avatar-placeholder.svg" alt="Carson Hansen" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+        <p>
+          I'm currently open to full-stack and software engineering
+          opportunities, and always happy to connect about a project, a role,
+          or just to talk shop. The quickest way to reach me is by email.
+        </p>
+        <!-- Replace the email with yours -->
+        <a href="mailto:Carson.Hansen@gmail.com" class="btn">Carson.Hansen@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/Cesium1289" title="Link to GitHub Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <!-- TODO: replace # with your actual LinkedIn profile URL -->
+          <a href="#" title="Link to LinkedIn Profile">
+            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <!-- Credit to the original template author, per the license terms. -->
+      <p>
+        &copy; 2026 Carson Hansen. Built on the open-source <a href="https://github.com/nisarhassan12/portfolio-template" class="link">portfolio-template</a> by Nisar Hassan Naqvi.
+      </p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+</body>
+
+</html>
