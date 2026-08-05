@@ -35,9 +35,13 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #ff3258;
+    --pink: #2f80ff;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
+    --blue-deep: #060a12;
+    --blue-mid: #0d1b2e;
+    --blue-glow: rgba(47, 128, 255, 0.22);
+    --blue-glow-soft: rgba(47, 128, 255, 0.10);
 
 
     --container-max-width: 1180px;
@@ -72,7 +76,16 @@ body {
     font-weight: 400;
     color: var(--white-1);
     line-height: var(--line-height-normal);
-    background: var(--black);
+    background-color: var(--black);
+    background-image:
+        repeating-linear-gradient(
+            135deg,
+            rgba(47, 128, 255, 0.05) 0px,
+            rgba(47, 128, 255, 0.05) 2px,
+            transparent 2px,
+            transparent 60px
+        );
+    background-attachment: fixed;
     overflow-x: hidden;
 }
 
@@ -108,6 +121,65 @@ body {
 section {
     padding: var(--gutter-huge) 0;
     border-bottom: var(--border-light);
+    position: relative;
+    overflow: hidden;
+}
+
+section .row {
+    position: relative;
+    z-index: 1;
+}
+
+/* Soft glowing blue blobs behind each section for visual depth */
+.work::before,
+.client::before,
+.about::before,
+.contact::before {
+    content: "";
+    position: absolute;
+    width: 70rem;
+    height: 70rem;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.work::before {
+    background: var(--blue-glow);
+    top: -14rem;
+    right: -10rem;
+    width: 90rem;
+    height: 90rem;
+}
+
+.client::before {
+    background: var(--blue-glow-soft);
+    bottom: -25rem;
+    left: -20rem;
+}
+
+.about::before {
+    background: var(--blue-glow);
+    top: -6rem;
+    left: -20rem;
+}
+
+.contact::before {
+    background: var(--blue-glow-soft);
+    bottom: -20rem;
+    right: -15rem;
+}
+
+@media(max-width: 900px) {
+    .work::before,
+    .client::before,
+    .about::before,
+    .contact::before {
+        width: 40rem;
+        height: 40rem;
+        filter: blur(80px);
+    }
 }
 
 img {
@@ -407,13 +479,19 @@ body:not(.user-is-tabbing) a:focus {
     /* TODO: swap this gradient for a photo if you'd like, e.g.:
        background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url('./images/header.jpg');
     */
-    background: linear-gradient(135deg, #141414 0%, #2c0a17 60%, #4a0f26 100%);
+    background: linear-gradient(135deg, #0a0e14 0%, #0d1b2e 60%, #14304f 100%);
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     font-size: var(--font-size-normal);
+    position: relative;
+    clip-path: url(#headerClip);
 }
+
+/* ----- Wave dividers ----- */
+
+/* Wave clip-path is applied directly to .header — see clip-path: url(#headerClip) above */
 
 .header__text {
     position: absolute;
@@ -583,7 +661,31 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .about__photo-container {
-    margin-bottom: var(--gutter-normal);
+    margin: 0 auto var(--gutter-normal);
+    position: relative;
+    width: 28rem;
+    height: 28rem;
+    max-width: 100%;
+    background: var(--blue-mid);
+    border-radius: 50%;
+}
+
+.about__photo-container::before {
+    content: "";
+    position: absolute;
+    inset: -1.5rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--blue-glow) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.about__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 2%;
+    border-radius: 50%;
 }
 
 @media(min-width: 901px) {
@@ -592,7 +694,7 @@ body:not(.user-is-tabbing) a:focus {
     }
     
     .about__photo-container {
-        flex: 1;
+        flex: 0 0 28rem;
         margin: 0 var(--gutter-huge) 0 0;
     }
 }
